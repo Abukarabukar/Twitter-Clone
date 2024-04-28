@@ -1,0 +1,39 @@
+{
+  "annotations": {
+    "changelogDate": "20240428154822"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "vehicleID",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "vehicleSize",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "make",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lastServicingDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "model",
+      "fieldType": "String"
+    }
+  ],
+  "name": "Vehicle",
+  "relationships": [
+    {
+      "otherEntityName": "reservation",
+      "otherEntityRelationshipName": "vehicle",
+      "relationshipName": "reservations",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no"
+}

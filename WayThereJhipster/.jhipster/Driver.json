@@ -1,0 +1,41 @@
+{
+  "annotations": {
+    "changelogDate": "20240428154821"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "driverID",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "fname",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lname",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dob",
+      "fieldType": "LocalDate"
+    }
+  ],
+  "name": "Driver",
+  "relationships": [
+    {
+      "otherEntityName": "vehicle",
+      "relationshipName": "vehicle",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "reservation",
+      "otherEntityRelationshipName": "driver",
+      "relationshipName": "reservations",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no"
+}

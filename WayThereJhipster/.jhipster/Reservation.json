@@ -1,0 +1,105 @@
+{
+  "annotations": {
+    "changelogDate": "20240428154827"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "reservationID",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "requestedTime",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "date",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "startTime",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "endTime",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "waitTime",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "driverRating",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "customerRating",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "comment",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "tripCost",
+      "fieldType": "Float"
+    }
+  ],
+  "name": "Reservation",
+  "relationships": [
+    {
+      "otherEntityName": "insurance",
+      "relationshipName": "insurance",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "location",
+      "relationshipName": "pickupLocation",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "location",
+      "relationshipName": "dropoffLocation",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "customer",
+      "otherEntityRelationshipName": "reservations",
+      "relationshipName": "customer",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "driver",
+      "otherEntityRelationshipName": "reservations",
+      "relationshipName": "driver",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "vehicle",
+      "otherEntityRelationshipName": "reservations",
+      "relationshipName": "vehicle",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "rate",
+      "otherEntityRelationshipName": "reservations",
+      "relationshipName": "rate",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "payment",
+      "otherEntityRelationshipName": "reservation",
+      "relationshipName": "payment",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no"
+}

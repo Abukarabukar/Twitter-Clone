@@ -1,0 +1,35 @@
+{
+  "annotations": {
+    "changelogDate": "20240428154826"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "rateID",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "timeOfDay",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "vehicleSize",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "baseRate",
+      "fieldType": "Integer"
+    }
+  ],
+  "name": "Rate",
+  "relationships": [
+    {
+      "otherEntityName": "reservation",
+      "otherEntityRelationshipName": "rate",
+      "relationshipName": "reservations",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no"
+}
